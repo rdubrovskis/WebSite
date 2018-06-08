@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("/Content/UserStyle.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("/Scripts/UserScripts.js")
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div id="titlebox">
+                <h3 class="headertitle" id="title">Robert Dubrovskis</h3>
+                <h4 class="headertitle" id="subtitle">Web Development and Digital Art</h4>
+            </div>
+            <div id="resumebox"><h2>RESUME</h2></div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <footer class="navbar-fixed-bottom">
+            <div class="container">
+                <a href="http://www.twitter.com/SirBron"><img class="socmedia" src="~/Images/white-twitter-24.png" /></a>
+                <a href="http://sirbronson.tumblr.com"><img class="socmedia" src="~/Images/tumblr-4-24.png" /></a>
+                <a href="http://sirbronson.artstation.com"><img class="socmedia" src="~/Images/Artstation.png" /></a>
+                <a href="http://www.linkedin.com/robertdubrovskis"><img class="socmedia" src="~/Images/linkedin-4-24.png" /></a>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/UserScripts.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

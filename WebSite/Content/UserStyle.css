@@ -1,0 +1,219 @@
+﻿@media only screen and (max-width: 629px) {
+    gallery {
+        justify-content: center;
+    }
+}
+
+.modal.in .modal-dialog {
+    max-width: 80%;
+}
+
+.body-content{
+    padding:15px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    outline: none;
+    margin: auto;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    display: table;
+    /* margin-left: 100px; */
+}
+
+.modal-dialog {
+    display: table;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: auto;
+    min-width: 300px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    align-items: center;
+    overflow: auto;
+}
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    margin-right: 0px;
+}
+
+.gallery-thumb{
+    max-width:400px;
+    cursor:pointer;
+}
+
+.modal-body {
+    padding: 0px;
+}
+.modal-header {
+    border-bottom: none;
+    padding: 5px;
+}
+button.close {
+    width: 0px;
+    padding-right: 15px;
+}
+
+button.close>span{
+    position:absolute;
+}
+
+.img-title {
+    padding: 2px 15px;
+    display: inline-block;
+    background: black;
+    color: ghostwhite;
+    margin-bottom: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.img-subtitle {
+    font-weight: bold;
+    font-size: larger;
+    font-variant-caps: all-small-caps;
+}
+
+.img-caption {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.img-responsive {
+    max-height: 85vh;
+}
+
+.captiontext {
+    color: white;
+    font-size: 50px;
+    font-variant-caps: all-small-caps;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Likely future */
+}
+
+.headertitle {
+    margin: 0px;
+    /*font-family: 'IBM Plex Sans', sans-serif;*/
+    font-family: 'Quicksand', sans-serif;
+    color: ghostwhite;
+}
+
+#subtitle{
+    padding-bottom:5px;
+}
+#title {
+    border-bottom: 1px white solid;
+    width: 177px;
+}
+
+.navbar-inverse {
+    background-color: #000000;
+    /* border-color: #080808; */
+    font-variant-caps: all-petite-caps;
+}
+footer {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    background-color: black;
+}
+hr {
+    border-top: 1px solid #080808;
+    width:25%;
+}
+
+.menuimage:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); 
+    filter: gray; 
+    -webkit-transition: all 1.5s ease; 
+    cursor:pointer;
+
+}
+
+#titlebox {
+    display: inline-block;
+}
+#resumebox {
+    float: right;
+    text-align: right;
+
+}
+    #resumebox > h2 {
+        margin: 0px;
+        padding-top: 8px;
+        color: ghostwhite;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+.socmedia {
+    width: 24px;
+    float: right;
+    margin-top: 13px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+.socmedia:hover {
+    opacity: 1;
+}
+
+.modal.fade.in{
+    display:flex !important;
+}
+
+.gallery {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row-reverse;
+}
+.gallery-item {
+    display: inline-block;
+}
+
+.cropthumb {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor:pointer;
+}
+.cropthumb img {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    height: 600px;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.cropthumb img.portrait {
+    width: 100%;
+    height: auto;
+}
