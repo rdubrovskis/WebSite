@@ -1,11 +1,25 @@
-﻿@media only screen and (max-width: 629px) {
-    gallery {
-        justify-content: center;
+﻿@media only screen and (max-width: 600px) {
+    .body-content {
+        padding: 0px !important;
     }
+
+    .cropthumb img {
+        left: 50%!important;
+        top: 60% !important;
+    }
+    .cropthumb {
+        width: 100vw !important;
+        height: 50vh !important;
+
+    }
+    .modal.in .modal-dialog {
+        max-width: unset!important;
+    }
+
 }
 
 .modal.in .modal-dialog {
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .body-content{
@@ -188,9 +202,9 @@ hr {
 }
 
 .gallery {
+    display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    flex-direction: row-reverse;
+    justify-content: center;
 }
 .gallery-item {
     display: inline-block;
@@ -198,8 +212,8 @@ hr {
 
 .cropthumb {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 285px;
+    height: 285px;
     overflow: hidden;
     cursor:pointer;
 }
@@ -216,4 +230,9 @@ hr {
 .cropthumb img.portrait {
     width: 100%;
     height: auto;
+}
+.fillerbox {
+    min-width: 285px;
+    max-width:570px;    
+    flex: 1;
 }
