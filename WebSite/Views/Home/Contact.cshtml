@@ -1,17 +1,147 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Resume - ";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div>
+    <img id="scrollup" src="~/Images/ui-12-512.png" />
+</div>
+
+<div id="resume-container">
+    <div id="resume-top">
+        <div id="photo"><img src="http://via.placeholder.com/250x350" /></div>
+        <div id="contact-box">
+            <h1 style="text-align:left">ROBERT DUBROVSKIS</h1>
+            <h2>Digital Artist, Web-based Developer</h2>
+            <adivress>
+                One Microsoft Way<br />
+                Redmond, WA 98052-6399<br />
+            </adivress>
+
+            <adress>
+                <strong>Phone:</strong> <a href="tel:555-555-5555">555-555-5555</a><br />
+                <strong>E-mail/Skype:</strong>   <a href="mailto:robert.dubrovskis@gmail.com">robert.dubrovskis@gmail.com</a><br />
+                <strong>LinkedIn:</strong>   <a href="http://www.linkedin.com/robertdubrovskis">linkedin.com/robertdubrovskis</a><br />
+            </adress>
+        </div>
+    </div>
+    <hr />
+    <p style="text-align:justify">
+        I’m a newly graduated student in web development with a focus on .NET and systems-development in Sharepoint.
+        In adivition to programming aptitude I also have studied visual design theory as I practice digital art as a hobby.
+        This lets me adiv a bit of an artistic perspective in my approach. Both technical and creative excellence is what I
+        strive for in every project. I’m experienced in building and maintenance of personal computers and have a basic
+        aptitude with a wide variety of software across multiple multimedia branches. I always do my best and I’m good at
+        following instructions and am able to work comfortably both independently and in a team environment. In my role as
+        a developer, I aim to make use of my varied skillset to its fullest to implement creative solutions and solve any
+        problem.
+    </p>
+    <div class="row">
+        <div class="col-md-6 skills-block">
+            <h2 class="resume-block-title">IT Skills</h2>
+            <dl class="skills-summary">
+                <dt>Programming</dt>
+                <dd>
+                    C#<br />ASP.NET MVC<br />Javascript<br />HTML, CSS, JavascriptJquery, Bootstrap
+                </dd>
+
+                <dt>
+                    Sharepoint
+                </dt>
+                <dd>Office 365, Sharepoint Server</dd>
+
+                <dt>Adobe Photoshop</dt>
+                <dd>Digital painting, Image editing</dd>
+
+                <dt>Microsoft Office</dt>
+                <dd>Office 365, Word, Excel, PowerPoint...</dd>
+
+                <dt>Video Editing</dt>
+                <dd>Sony Vegas, HitFilm 4</dd>
+            </dl>
+        </div>
+
+        <div class="col-md-6 skills-block">
+            <h2 class="resume-block-title">Language Skills</h2>
+            <dl class="skills-summary">
+                <dt>Latvian</dt>
+                <dd>Mother tongue</dd>
+
+                <dt>English</dt>
+                <dd>Fluent</dd>
+
+                <dt>Russian</dt>
+                <dd>Basic</dd>
+
+                <dt>Swedish</dt>
+                <dd>Basic</dd>
+            </dl>
+        </div>
+
+    </div>
+    <hr />
+    <div>
+        <h1>EDUCATION</h1>
+        <div>
+            <div class="resume-block-content">
+                <div class="resume-block-title">Lexicon</div>
+                <h2 class="resume-title">.NET Development</h2>
+                <h3 class="resume-date">March 2018 – August 2018</h3>
+                <span class="resume-desc">ASP.NET, MVC 5, Versioning, Git, Github, User Management MVC, Scrum, C# 6, Generics, Linq, Javascript, CSS3, HTML5, Entity framework 6, SQL, UI/UX, jQuery, Unit testing, Tdiv.</span>
+            </div>
+
+            <div class="resume-block-content">
+                <div class="resume-block-title">EC Utbildning</div>
+                <h2 class="resume-title">Systems Development in Sharepoint</h2>
+                <h3 class="resume-date">August 2015 – January 2017</h3>
+                <span class="resume-desc">Administrating and configuring Sharepoint via Office 365 and Sharepoint Server with the main focus on configuration via C#, Javascript, HTML, CSS, as well as jQuery, Bootstrap, Ajax.</span>
+            </div>
+
+            <div class="resume-block-content">
+                <div class="resume-block-title">Halmstad Universiy</div>
+                <h2 class="resume-title">Networks Design</h2>
+                <h3 class="resume-date">August 2014 – June 2015</h3>
+                <span class="resume-desc">Hands-on routing and switching using Cisco equipment with focus on designing local networks.</span>
+            </div>
+
+            <div class="resume-block-content">
+                <div class="resume-block-title">Sven Eriksonsgymnasiet</div>
+                <h2 class="resume-title">International Baccalaureate</h2>
+                <h3 class="resume-date">August 2011 – June 2013</h3>
+            </div>
+
+            <div class="resume-block-content">
+                <div class="resume-block-title">Riga School of Design and Art </div>
+                <h2 class="resume-title">Traditional Art and Design</h2>
+                <h3 class="resume-date">Sept 2008 – June 2011</h3>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        <h1>WORK EXPERIENCE</h1>
+        <div class="resume-block-content">
+            <div class="resume-block-title">Affordable Luxury</div>
+            <h2 class="resume-title">Web Editor</h2>
+            <h3 class="resume-date">Stockholm (2014-2015)</h3>
+            <span class="resume-desc">
+                Web media management, updating existing content, adding new content. Working with HTML and Google services such as Maps, AdSense, Trends, etc.
+            </span>
+        </div>
+
+        <div class="resume-block-content">
+            <div class="resume-block-title">Borås Kebab</div>
+            <h2 class="resume-title">Kitchen Assistant</h2>
+            <h3 class="resume-date">Borås (2011)</h3>
+            <span class="resume-desc">
+                Kitchen cleaning/maintenance, preparing food items, picking up and delivering ingredients.
+            </span>
+        </div>
+    </div>
+
+
+
+</div>

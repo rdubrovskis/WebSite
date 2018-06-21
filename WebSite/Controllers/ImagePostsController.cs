@@ -23,6 +23,7 @@ namespace WebSite.Controllers
         }
 
         // GET: ImagePosts/Details/5
+        [Authorize(Roles = "admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,6 +39,7 @@ namespace WebSite.Controllers
         }
 
         // GET: ImagePosts/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             return View();
@@ -89,6 +91,7 @@ namespace WebSite.Controllers
         //}
 
         // GET: ImagePosts/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -120,6 +123,7 @@ namespace WebSite.Controllers
         }
 
         // GET: ImagePosts/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

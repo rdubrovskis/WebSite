@@ -2,71 +2,65 @@
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Art - ";
+    int index = Model.Count();
 }
+<style>
+    .fillerbox{
+        order: @(index+1);
+    }
+</style>
 
-@*<h2>Index</h2>
+<h1>DIGITAL ART</h1>
+<hr />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>@Html.DisplayNameFor(model => model.ImageUrl)</th>
-        <th></th>
-    </tr>
+<div>
+    <img id="scrollup" src="~/Images/ui-12-512.png" />
+</div>      
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            <a href="@Url.Content(item.ImageUrl)">Image</a>
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>*@
 <div class="gallery">
     @foreach (var item in Model)
     {
-   
+        string filePath = Server.MapPath(Url.Content("~"+item.ImageUrl));
+        string imageclass = "";
 
-        <div class="gallery-item">
-            <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img src="@Url.Content(item.ImageUrl)"></div></a>
+        System.Drawing.Image image = System.Drawing.Image.FromFile(filePath);
+
+        if(image.Width > image.Height)
+        {
+            imageclass = "landscape";
+        }
+        else
+        {
+            imageclass = "portrait";
+        }
+
+        <div class="gallery-item" style="order:@index">
+            <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="@Url.Content(item.ImageUrl)"></div></a>
             <div id="@item.Id.ToString()" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content modal-di">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                             <div class="img-caption">
                                 <h4 class="img-title">@item.Title</h4>
-                                <p class="img-subtitle">@item.Description</p>
                             </div>
-
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                         </div>
-                        <div class="modal-body">
-                            <img src="@Url.Content(item.ImageUrl)" class="img-responsive">
+                        <div class="Modal-body">
+                            <table>
+                                <caption>@item.Description</caption>
+                                <tr><td><img src="@Url.Content(item.ImageUrl)" class="img-responsive"></td></tr>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        index--;
+
     }
+    <div class="gallery-item fillerbox"></div>
+    <div class="gallery-item fillerbox"></div>
+    <div class="gallery-item fillerbox"></div>
     <div class="gallery-item fillerbox"></div>
 </div>

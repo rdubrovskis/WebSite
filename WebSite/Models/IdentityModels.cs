@@ -31,5 +31,7 @@ namespace WebSite.Models
         }
 
         public System.Data.Entity.DbSet<WebSite.Models.ImagePost> ImagePosts { get; set; }
+
+ 
     }
 }

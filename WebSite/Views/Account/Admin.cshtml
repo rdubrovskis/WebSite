@@ -1,0 +1,31 @@
+﻿@model WebSite.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Admin";
+    string admin = "Not an admin";
+    if (this.User.IsInRole("admin")) { admin = "ADMIN"; }
+}
+
+
+<div>
+    <h1>Admin Panel</h1>
+    <br />
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>Gallery</dt>
+        <dd>
+            <a href="~/ImagePosts/Create"><input class="btn" value="Post to Gallery" /></a>
+        </dd>
+
+        <dt>Accounts</dt>
+        <dd>
+            <a href="~/Account/Register"><input class="btn" value="Register an Account" /></a>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

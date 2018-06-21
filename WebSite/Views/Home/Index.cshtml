@@ -1,34 +1,44 @@
 ﻿@section scripts{}
 
-@{
-    ViewBag.Title = "Home Page";
-}
 
-<script type="text\javascript">
-    $(document).ready(function () {
-        $("#menuimage").mouseover(function () {
-            $("#menuimage").css("opacity", "0.2");
-        });
-        $("#menuimage").mouseout(function () {
-            $("#menuimage").css("opacity", "1");
-        });
-    });
-</script>
+<style>
+    html{
+        height:100%;
+    }
+    body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 100%;
+    }
+    .body-content{
+        margin: auto;
+    }
 
+    @@media only screen and (max-width: 767px) {
+        body {
+            height: unset;
+        }
+    }
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 menuimage">
-            <img width="100%" src="~/Uploads/Images/ace_of_diamonds_by_sirbronson-dbkyfu1.png" />
+        @@media only screen and (max-height: 600px) {
+            body {
+                height: unset;
+            }
+        }
+
+</style>
+
+<div id="homecontainer">
+        <div class="menuimage" id="programming">
+            <img class="img-responsive" src="/Uploads/Images/ace_of_diamonds_by_sirbronson-dbkyfu1.png" />
             <div class="overlay">
                 <p class="captiontext">Programming</p>
             </div>
         </div>
-        <div class="col-sm-6 menuimage">
-            <img width="100%" src="~/Uploads/Images/DMQvOw_W0AE0NUS.jpg" />
+        <div class="menuimage" onclick="ArtLink()">
+            <img class="img-responsive" src="~/Uploads/Images/DMQvOw_W0AE0NUS.jpg" />
             <div class="overlay">
                 <p class="captiontext">Art</p>
             </div>
         </div>
-    </div>
 </div>

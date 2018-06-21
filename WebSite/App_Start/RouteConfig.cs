@@ -14,10 +14,30 @@ namespace WebSite
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+            "Admin",
+            "admin",
+            new { controller = "Account", action = "Admin" }
+        );
+
+            routes.MapRoute(
+            "Art",
+            "art",
+            new { controller = "ImagePosts", action = "Index" }
+        );
+
+            routes.MapRoute(
+            "Resume",
+            "resume",
+            new { controller = "Home", action = "Contact" }
+        );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            
         }
     }
 }

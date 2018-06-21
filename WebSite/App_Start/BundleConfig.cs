@@ -19,13 +19,18 @@ namespace WebSite
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/popper").Include(
+                      "~/Scripts/esm/*.js",
+                      "~/Scripts/umd/*.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap*",
+                      "~/Scripts/*.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap*",
+                      "~/Content/site.css",
+                      "~/Content/UserStyle.css"));
         }
     }
 }

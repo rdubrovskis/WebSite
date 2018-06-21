@@ -3,6 +3,7 @@ namespace WebSite.Migrations
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<WebSite.Models.ApplicationDbContext>
@@ -26,6 +27,8 @@ namespace WebSite.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Roles.Add(new IdentityRole { Name = "admin" });
+            context.SaveChanges();
         }
     }
 }
