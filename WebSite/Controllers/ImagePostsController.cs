@@ -24,6 +24,7 @@ namespace WebSite.Controllers
 
         // GET: ImagePosts/Details/5
         [Authorize(Roles = "admin")]
+        [ValidateAntiForgeryToken]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -40,6 +41,7 @@ namespace WebSite.Controllers
 
         // GET: ImagePosts/Create
         [Authorize(Roles = "admin")]
+        [ValidateAntiForgeryToken]
         public ActionResult Create()
         {
             return View();
@@ -49,6 +51,7 @@ namespace WebSite.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Title,Description")] ImagePost imagePost/*, HttpPostedFileBase file*/)
         {
@@ -92,6 +95,7 @@ namespace WebSite.Controllers
 
         // GET: ImagePosts/Edit/5
         [Authorize(Roles = "admin")]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int? id)
         {
             if (id == null)

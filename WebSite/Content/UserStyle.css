@@ -94,7 +94,7 @@ h1::selection{
 }
 
 h2, h3, h4{
-    font-size:unset;
+    font-size:inherit;
 }
 
 h2::selection {

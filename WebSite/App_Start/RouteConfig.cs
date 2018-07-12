@@ -26,10 +26,22 @@ namespace WebSite
         );
 
             routes.MapRoute(
+            "Programming",
+            "programming",
+            new { controller = "Home", action = "Programming" }
+        );
+
+            routes.MapRoute(
             "Resume",
             "resume",
             new { controller = "Home", action = "Contact" }
         );
+
+            routes.MapRoute(
+           "Website",
+           "programming/website",
+           new { controller = "Home", action = "About" }
+       );
 
             routes.MapRoute(
                 name: "Default",

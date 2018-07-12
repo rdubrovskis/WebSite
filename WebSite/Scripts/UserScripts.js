@@ -9,12 +9,21 @@ $(document).ready(function () {
     }
 });
 
+function WebsiteLink() {
+    window.location.href = window.location.pathname + "/website"
+}
+
 function ArtLink() {
-    window.location.href ="art"
+
+    window.location.href = "art"
+}
+
+function ProgrammingLink() {
+    window.location.href = "programming"
 }
 
 function ResumeLink() {
-    window.location.href = "resume"
+    window.location.href = window.location.origin + "/resume";
 }
 
 $(document).ready(function () {
