@@ -3,8 +3,9 @@ namespace WebSite.Migrations
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using System.Linq;
+    using WebSite.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<WebSite.Models.ApplicationDbContext>
     {
@@ -15,8 +16,7 @@ namespace WebSite.Migrations
 
         protected override void Seed(WebSite.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
+            //  This method will be called after migrating to the latest versio
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
@@ -27,8 +27,6 @@ namespace WebSite.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            context.Roles.Add(new IdentityRole { Name = "admin" });
-            context.SaveChanges();
         }
     }
 }
