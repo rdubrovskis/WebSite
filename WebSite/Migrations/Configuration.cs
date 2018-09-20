@@ -27,6 +27,8 @@ namespace WebSite.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Roles.Add(new IdentityRole { Name = "admin" });
+            context.SaveChanges();
         }
     }
 }

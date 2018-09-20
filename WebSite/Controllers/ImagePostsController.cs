@@ -64,10 +64,10 @@ namespace WebSite.Controllers
 
             var image = WebImage.GetImageFromRequest();
             var filename = Path.GetFileName(image.FileName);
-            var path = Path.Combine(Server.MapPath("~/App_Data/Images"), filename);
+            var path = Path.Combine(Server.MapPath("~/Images"), filename);
             image.Save(path);
-            imagePost.ImageUrl = Url.Content(Path.Combine("~/App_Data/Images", filename));
-            path = Url.Content(Path.Combine("~/App_Data/Images", filename));
+            imagePost.ImageUrl = Url.Content(Path.Combine("~/Images", filename));
+            path = Url.Content(Path.Combine("~/Images", filename));
 
             if (ModelState.IsValid)
             {
