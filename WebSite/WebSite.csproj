@@ -316,7 +316,7 @@
     <Content Include="Views\Home\Programming.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\Images\" />
     <Folder Include="Images\" />
     <Folder Include="Scripts\esm\" />
     <Folder Include="Scripts\umd\" />
