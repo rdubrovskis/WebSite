@@ -21,22 +21,22 @@
 <div class="gallery">
     @foreach (var item in Model)
     {
-        string filePath = "~"+item.ImageUrl;
+        string filePath = Server.MapPath(Url.Content("~"+item.ImageUrl));
         string imageclass = "";
 
-        //System.Drawing.Image image = System.Drawing.Image.FromFile(filePath);
+        System.Drawing.Image image = System.Drawing.Image.FromFile(filePath);
 
-        //if(image.Width > image.Height)
-        //{
-        //    imageclass = "landscape";
-        //}
-        //else
-        //{
-        //    imageclass = "portrait";
-        //}
+        if(image.Width > image.Height)
+        {
+            imageclass = "landscape";
+        }
+        else
+        {
+            imageclass = "portrait";
+        }
 
         <div class="gallery-item" style="order:@index">
-            <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="~@item.ImageUrl)"></div></a>
+            <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="@Url.Content(item.ImageUrl)"></div></a>
             <div id="@item.Id.ToString()" class="modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content modal-di">
@@ -49,7 +49,7 @@
                         <div class="Modal-body">
                             <table>
                                 <caption>@item.Description</caption>
-                                <tr><td><img src="~@item.ImageUrl)" class="img-responsive"></td></tr>
+                                <tr><td><img src="@Url.Content(item.ImageUrl)" class="img-responsive"></td></tr>
                             </table>
                         </div>
                     </div>
