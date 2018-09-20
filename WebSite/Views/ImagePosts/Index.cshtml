@@ -36,7 +36,7 @@
         }
 
         <div class="gallery-item" style="order:@index">
-            <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="@Url.Content(item.ImageUrl)"></div></a>
+            <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="~@item.ImageUrl)"></div></a>
             <div id="@item.Id.ToString()" class="modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content modal-di">
