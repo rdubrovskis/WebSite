@@ -1,5 +1,7 @@
 ﻿@section scripts{}
-
+@{ 
+    string path = Server.MapPath("~/App_Data/Images");
+}
 
 <style>
     html{
@@ -30,13 +32,13 @@
 
 <div id="homecontainer">
         <div class="menuimage" onclick="ProgrammingLink()">
-            <img class="img-responsive" src="/App_Data/Images/ace_of_diamonds_by_sirbronson-dbkyfu1.png" />
+            <img class="img-responsive" src="@path/ace_of_diamonds_by_sirbronson-dbkyfu1.png" />
             <div class="overlay">
                 <p class="captiontext">Programming</p>
             </div>
         </div>
         <div class="menuimage" onclick="ArtLink()">
-            <img class="img-responsive" src="~/App_Data/Images/DMQvOw_W0AE0NUS.jpg" />
+            <img class="img-responsive" src="@path/DMQvOw_W0AE0NUS.jpg" />
             <div class="overlay">
                 <p class="captiontext">Art</p>
             </div>
