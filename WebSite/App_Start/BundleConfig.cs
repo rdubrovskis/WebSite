@@ -19,10 +19,6 @@ namespace WebSite
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/popper").Include(
-                      "~/Scripts/esm/*.js",
-                      "~/Scripts/umd/*.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap*",
                       "~/Scripts/*.js"));
