@@ -246,7 +246,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\435-01-512.png" />
+    <Content Include="Images\ace_of_diamonds_by_sirbronson-dbkyfu1.png" />
     <Content Include="Images\Artstation.png" />
+    <Content Include="Images\DMQvOw_W0AE0NUS.jpg" />
     <Content Include="Images\linkedin-4-24.png" />
     <Content Include="Images\tumblr-4-24.png" />
     <Content Include="Images\ui-12-512.png" />
