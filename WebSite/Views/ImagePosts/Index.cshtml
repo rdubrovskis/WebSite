@@ -24,16 +24,16 @@
         string filePath = "~"+item.ImageUrl;
         string imageclass = "";
 
-        System.Drawing.Image image = System.Drawing.Image.FromFile(filePath);
+        //System.Drawing.Image image = System.Drawing.Image.FromFile(filePath);
 
-        if(image.Width > image.Height)
-        {
-            imageclass = "landscape";
-        }
-        else
-        {
-            imageclass = "portrait";
-        }
+        //if(image.Width > image.Height)
+        //{
+        //    imageclass = "landscape";
+        //}
+        //else
+        //{
+        //    imageclass = "portrait";
+        //}
 
         <div class="gallery-item" style="order:@index">
             <a data-toggle="modal" data-target="#@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="~@item.ImageUrl)"></div></a>
