@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebSite.Models.ImagePost>
+
+
+@{
+    ViewBag.Title = "Art - ";
+    int index = Model.Count();
+}
+<style>
+    .fillerbox{
+        order: @(index+1);
+    }
+</style>
+
+<h1>DIGITAL ART</h1>
+<hr />
+
+<div>
+    <img id="scrollup" src="~/Images/ui-12-512.png" />
+</div>      
+
+<div class="gallery">
+    @foreach (var item in Model)
+    {
+        string filePath = Server.MapPath(Url.Content("~"+item.ImageUrl));
+        string imageclass = "";
+
+        System.Drawing.Image image = System.Drawing.Image.FromFile(filePath);
+
+        if(image.Width > image.Height)
+        {
+            imageclass = "landscape";
+        }
+        else
+        {
+            imageclass = "portrait";
+        }
+
+        <div class="gallery-item" style="order:@index">
+            <a data-bs-toggle="modal" data-bs-target="#a-@item.Id.ToString()"><div class="cropthumb"><img class="@imageclass" src="@Url.Content(item.ImageUrl)"></div></a>
+            <div id="a-@item.Id.ToString()" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content modal-di">
+                        <div class="modal-header">
+                            <div class="img-caption">
+                                <h4 class="img-title">@item.Title</h4>
+                            </div>
+                            <button type="button" class="close" data-bs-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+                        </div>
+                        <div class="Modal-body">
+                            <table>
+                                <caption>@item.Description</caption>
+                                <tr><td><img src="@Url.Content(item.ImageUrl)" class="img-responsive"></td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        index--;
+
+    }
+    <div class="gallery-item fillerbox"></div>
+    <div class="gallery-item fillerbox"></div>
+    <div class="gallery-item fillerbox"></div>
+    <div class="gallery-item fillerbox"></div>
+</div>

@@ -1,0 +1,47 @@
+﻿@section scripts{}
+@{
+    string path = Server.MapPath("~\\App_Data\\Images");
+}
+
+<style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 100%;
+    }
+
+    .body-content {
+        margin: auto;
+        overflow: hidden;
+    }
+
+    @@media only screen and (max-height: 600px) {
+        body {
+            height: unset;
+        }
+    }
+</style>
+
+<div id="homecontainer">
+
+    <div class="nameplate">
+        <h1>ROBERTDUBROVSK.IS</h1>
+        <p style="text-align:center">ART & TECH PORTFOLIO</p>
+    </div>
+
+    <div class="homeitem" onclick="ProgrammingLink()">
+
+
+        <p class="captiontext">Programming</p>
+
+    </div>
+    <div class="homeitem" onclick="ArtLink()">
+
+        <p class="captiontext">Art</p>
+
+    </div>
+</div>

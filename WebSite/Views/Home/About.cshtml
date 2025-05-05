@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h1>PORTFOLIO SITE</h1>
+<style>
+    .about-desc {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        margin:15px;
+    }
+
+    img {
+        padding: 15px;
+    }
+    span{
+        text-align:justify
+    }
+    .about-odd{
+        flex-direction:row-reverse;
+    }
+</style>
+
+<div>
+    <div class="row">
+        <img src="http://via.placeholder.com/544x306" />
+        <div class="resume-block-content about-desc">
+            <h2 class="resume-block-title">Framework</h2>
+            <span>
+                This website started out as a personal project while I was studying MVC .NET as a way to solidify my skills with using the franework.
+                It uses various features of the framework to simplify presenting and adding new content such as Models, Routing, Identities, Data Validation and others.
+            </span>
+        </div>
+        
+    </div>
+
+    <div class="row about-odd">
+        <img src="http://via.placeholder.com/544x306" />
+        <div class="resume-block-content about-desc">
+            <h2 class="resume-block-title">Gallery</h2>
+            <span>
+                Instead of being static, the art gallery is designed to automatically fetch all images uploaded to it and present them with automatically generated thumbnails that
+                adapt to each image based on it being either portrait or landscape oriented. On click, images are then displayed in a modal window along with their respective titles and descriptions.
+            </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="http://via.placeholder.com/544x306" />
+        <div class="resume-block-content about-desc">
+            <h2 class="resume-block-title">Administration</h2>
+            <span>
+                Using MVC .NET in order to build a simple image gallery might seem like an overkill but the Models and User Identity features of MVC allowed me to implement an admin panel in order
+                to let me easily add new pieces to my digital art gallery from any device, without having to manually make changes to the source code every time.
+            </span>
+        </div>
+    </div>
+
+</div>
